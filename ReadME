@@ -1,0 +1,20 @@
+Link to access the full project: https://gitlab.oit.duke.edu/dkb34/campus_space_and_energy
+Our final presentation slides are in PDF on this repository.
+
+Duke University
+Code+ 2024: Campus Space and Energy Project (https://codeplus.duke.edu/project/campus-space-energy-management-system/)
+Project under MIT License
+
+Goal and Team:
+Duke University has a climate commitment to reduce carbon emissions by 50% by 2030. We have been tasked by Duke Campus Facilities Team (Our stakeholders Jeff Bethke & Greg Anspach) to create a solution to track occupancy over Duke buildings, with the goal of better managing space and energy consumption.
+Our team was composed of 2 managers [Mark McCahill (Duke IT) and John Haws (Duke IT)] and 4 students [Adeildo Vieira (CS), Desmond Boateng (MEC E/CS), Gabriel Mendonza (CS/Econ), and Shriya Minocha (CS/BME)].
+
+Description:
+From May 20th to July 31st, I worked on a joyful team to create a software system that tracks building occupancy using predictive occupancy models with Wi-Fi and CO2 data.
+My specific role can be divided into two parts. In the first three weeks, we worked together on Wi-Fi data; then, we "divided and conquered". I worked more on the backend: modeling CO2 data in Python, working on the Raspberry Pi and the CO2 sensor in Python, addressing the polling, saving, sorting, and deploying the data to a Rest web service (FastAPI), and then to our database.
+                                                                                                                                        
+Technologies used:
+1. Backend coding: We have used Pandas and Geopandas libraries, and Voila widgets.
+2. Database: PostgreSQL. Wi-Fi data (Splunk); CO2 data (Raspberry Pi, ATLAS(tm) Sensor).
+3. Frontend: HTML, CSS, and Javascript.
+4. Workflow control: Git CI/CD, Docker, and Docker Compose. Three branches: main, development, and production.

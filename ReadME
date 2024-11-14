@@ -1,9 +1,12 @@
 Link to access the full project: https://gitlab.oit.duke.edu/dkb34/campus_space_and_energy
-Our final presentation slides are in PDF on this repository.
+Our final presentation slides are in PDF on this repository. Description below.
 
 Duke University
 Code+ 2024: Campus Space and Energy Project (https://codeplus.duke.edu/project/campus-space-energy-management-system/)
 Project under MIT License
+
+My specific work:
+I worked in a full stack setting: For the backend, I used Python to make random forest and linear regression analyses of CO2 data. Did the Python code to make the Raspberry Pi communicate with the CO2 sensor, and send real-time data to our PostgreSQL database. Coded in SQL to match the database CO2 data in the front-end widgets in the website made in HTML/React/CSS.
 
 Goal and Team:
 Duke University has a climate commitment to reduce carbon emissions by 50% by 2030. We have been tasked by Duke Campus Facilities Team (Our stakeholders Jeff Bethke & Greg Anspach) to create a solution to track occupancy over Duke buildings, with the goal of better managing space and energy consumption.

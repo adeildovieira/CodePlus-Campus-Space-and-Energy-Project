@@ -1,0 +1,16 @@
+fastapi==0.110.0
+fastapi-cli==0.0.4
+uvicorn
+pydantic==2.7.0
+httpx-auth==0.22.0
+loguru==0.7.2
+orjson==3.9.15
+python-dotenv==1.0.1
+Secweb==1.9.1
+psycopg2
+python-multipart
+folium
+pandas
+branca
+pandas_geojson
+matplotlib

@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  pgdatabase:
+    image: 'postgres:16'
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/
+      - ./csv:/csv
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./db/init.sh:/docker-entrypoint-initdb.d/init.sh
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sm997postgres
+      POSTGRES_PASSWORD: postgresduke
+      POSTGRES_DB: postgres
+    env_file:
+      - .env
+
+  pgadmin:
+    image: 'dpage/pgadmin4:latest'
+    env_file:
+      - .env
+    ports:
+      - "8090:80"
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    depends_on:
+      - pgdatabase
+
+  web:
+    image: csv-heatmap-api
+    build: "./"
+    depends_on:
+      - pgdatabase
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./app:/app
+      - ./csv:/csv

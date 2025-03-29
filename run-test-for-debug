@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+sudo su vcm
+cd /home/vcm/development
+#
+# if the containers were runnning before, shut them down
+#
+sudo docker-compose -f docker-compose-test.yml down
+#
+# run the containers(s) using the test config
+#
+sudo docker-compose -f docker-compose-test.yml up

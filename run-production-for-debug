@@ -1,0 +1,11 @@
+#!/bin/bash
+# 
+sudo cd /home/vcm/production
+#
+# if the containers were runnning before, shut them down
+#
+sudo docker-compose -f /home/vcm/production/docker-compose-production.yml down
+#
+# run the containers(s) using the production config
+#
+sudo docker-compose -f /home/vcm/production/docker-compose-production.yml up

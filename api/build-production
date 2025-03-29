@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# Copy the source tree over to the VCM user's space
+# Then change the file ownership to VCM and switch to being the VCM user
+#
+sudo cp -R * /home/vcm/production
+
+# Copy the settings we don't want to keep in git into this directory
+#
+sudo cp /home/vcm/configs/env /home/vcm/production/.env
+
+# Make sure the pgadmin directory exists and has the correct ownership
+#
+sudo mkdir -p /home/vcm/production/pgadmin
+
+# Change ownership of the copied files and pgadmin directory
+#
+sudo chown -R vcm /home/vcm/production
+sudo chown -R 5050:5050 /home/vcm/production/pgadmin
+
+# Build the container(s) using the production config
+#
+sudo docker-compose -f /home/vcm/production/docker-compose-production.yml build

@@ -1,0 +1,67 @@
+version: '3.8'
+services:
+  pgdatabase:
+    image: 'postgres:16'
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/
+<<<<<<< HEAD
+      - ./csv:/csv
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/schema.sql
+      - ./db/init.sh:/docker-entrypoint-initdb.d/init.sh
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: sm997postgres
+      POSTGRES_PASSWORD: postgresduke
+      POSTGRES_DB: postgres
+    env_file:
+      - .env
+=======
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env # environment file that holds usernames and passwords we want to keep out of git
+>>>>>>> 3d7035e (Added Docker-compose production and development)
+
+  pgadmin:
+    image: 'dpage/pgadmin4:latest'
+    env_file:
+<<<<<<< HEAD
+      - .env
+=======
+      - .env # environment file that holds usernames and passwords we want to keep out of git
+>>>>>>> 3d7035e (Added Docker-compose production and development)
+    ports:
+      - "8090:80"
+    volumes:
+      - ./pgadmin:/var/lib/pgadmin
+    depends_on:
+      - pgdatabase
+
+<<<<<<< HEAD
+  web:
+    image: csv-heatmap-api
+    build: "./"
+=======
+  api:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: my-api
+>>>>>>> 3d7035e (Added Docker-compose production and development)
+    depends_on:
+      - pgdatabase
+    ports:
+      - "8080:8080"
+<<<<<<< HEAD
+    volumes:
+      - ./app:/app
+      - ./csv:/csv
+=======
+    env_file:
+      - .env # environment file that holds settings for the API
+    volumes:
+      - ./app:/app
+
+# Add wifi api stuff - not sure
+>>>>>>> 3d7035e (Added Docker-compose production and development)

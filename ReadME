@@ -1,23 +1,79 @@
-Link to access the full project: https://gitlab.oit.duke.edu/dkb34/campus_space_and_energy
-Our final presentation slides are in PDF on this repository. Description below.
+# Duke University: Code+ 2024 – Campus Space and Energy Project
 
-Duke University
-Code+ 2024: Campus Space and Energy Project (https://codeplus.duke.edu/project/campus-space-energy-management-system/)
-Project under MIT License
+[Project Website](https://codeplus.duke.edu/project/campus-space-energy-management-system/)  
+**License:** MIT License
 
-My specific work:
-I worked in a full stack setting: For the backend, I used Python to make random forest and linear regression analyses of CO2 data. Did the Python code to make the Raspberry Pi communicate with the CO2 sensor, and send real-time data to our PostgreSQL database. Coded in SQL to match the database CO2 data in the front-end widgets in the website made in HTML/React/CSS.
+---
 
-Goal and Team:
-Duke University has a climate commitment to reduce carbon emissions by 50% by 2030. We have been tasked by Duke Campus Facilities Team (Our stakeholders Jeff Bethke & Greg Anspach) to create a solution to track occupancy over Duke buildings, with the goal of better managing space and energy consumption.
-Our team was composed of 2 managers [Mark McCahill (Duke IT) and John Haws (Duke IT)] and 4 students [Adeildo Vieira (CS), Desmond Boateng (MEC E/CS), Gabriel Mendonza (CS/Econ), and Shriya Minocha (CS/BME)].
+## Overview
 
-Description:
-From May 20th to July 31st, I worked on a joyful team to create a software system that tracks building occupancy using predictive occupancy models with Wi-Fi and CO2 data.
-My specific role can be divided into two parts. In the first three weeks, we worked together on Wi-Fi data; then, we "divided and conquered". I worked more on the backend: modeling CO2 data in Python, working on the Raspberry Pi and the CO2 sensor in Python, addressing the polling, saving, sorting, and deploying the data to a Rest web service (FastAPI), and then to our database.
-                                                                                                                                        
-Technologies used:
-1. Backend coding: We have used Pandas and Geopandas libraries, and Voila widgets.
-2. Database: PostgreSQL. Wi-Fi data (Splunk); CO2 data (Raspberry Pi, ATLAS(tm) Sensor).
-3. Frontend: HTML, CSS, and Javascript.
-4. Workflow control: Git CI/CD, Docker, and Docker Compose. Three branches: main, development, and production.
+This project was developed in collaboration with Duke Campus Facilities Team to address Duke University's climate commitment of reducing carbon emissions by 50% by 2030. Our goal was to create a solution to track building occupancy for improved space and energy management.
+
+---
+
+## My Contributions
+
+I worked in a full-stack environment with responsibilities spanning backend, database integration, and front-end data display:
+
+- **Backend Development:**
+  - Developed Python scripts to perform random forest and linear regression analyses on CO₂ data.
+  - Created code for the Raspberry Pi to interface with the CO₂ sensor.
+  - Implemented real-time data transfer from the sensor to our PostgreSQL database.
+  
+- **Database & Front-End Integration:**
+  - Wrote SQL queries to synchronize CO₂ data with front-end widgets.
+  - Collaborated on the website development using HTML, React, and CSS.
+
+---
+
+## Project Team & Stakeholders
+
+**Stakeholders:**
+- **Jeff Bethke** & **Greg Anspach** – Duke Campus Facilities Team
+
+**Management:**
+- **Mark McCahill** (Duke IT)
+- **John Haws** (Duke IT)
+
+**Student Team Members:**
+- Adeildo Vieira (Computer Science)
+- Desmond Boateng (Mechanical Engineering/Computer Science)
+- Gabriel Mendonza (Computer Science/Economics)
+- Shriya Minocha (Computer Science/Biomedical Engineering)
+
+---
+
+## Project Timeline & Description
+
+**Timeline:** May 20th – July 31st
+
+The project was divided into two phases:
+1. **Initial Phase (First 3 Weeks):** Collaborative work on processing Wi-Fi data.
+2. **Division of Tasks:** Focus shifted to backend development where I concentrated on:
+   - Modeling CO₂ data with Python.
+   - Integrating and managing sensor data via Raspberry Pi.
+   - Polling, saving, and sorting data.
+   - Deploying data using a REST web service (FastAPI) to our database.
+
+---
+
+## Technologies Used
+
+- **Backend:**
+  - Python (Pandas, GeoPandas)
+  - Voila widgets
+- **Database:**
+  - PostgreSQL
+  - Data Sources: Wi-Fi (Splunk) and CO₂ sensor data (Raspberry Pi, ATLAS™ Sensor)
+- **Frontend:**
+  - HTML, CSS, JavaScript
+- **Workflow & Deployment:**
+  - Git (CI/CD)
+  - Docker & Docker Compose  
+  - Branches: `main`, `development`, and `production`
+
+---
+
+This README provides an overview of the project, my specific contributions, the team and stakeholders involved, and the technologies used to accomplish our objectives.
+
+Feel free to reach out if you have any questions or need further details!
